@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ticket-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: your-app
+  template:
+    metadata:
+      labels:
+        app: your-app
+    spec:
+      containers:
+      - name: your-app-container
+        image: kowshika123/casestudy-nodejs:latest
+        ports:
+          - containerPort: 7000
+        env:
+         - name: MONGODB_URI
+           value: "mongodb://casestudy:27017/ticket"
+      - name: casestudy
+        image: mongo:latest
+        ports:
+           - containerPort: 27017
