@@ -4,5 +4,15 @@
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",
     "mysql": "^2.18.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "eventbooking-monitoring",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
